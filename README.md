@@ -43,7 +43,5 @@ Java设计模式的学习
 &emsp;|--访问者：Visitor  
 &emsp;|--备忘录：Memento  
 &emsp;|--解释器：Interpreter  
- 
-&emsp;
-&emsp;
-&emsp;
+
+因篇幅限制，设计模式其它相关学习笔记在CSDN博客记录更新=>address
