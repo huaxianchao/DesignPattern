@@ -13,7 +13,7 @@ package createType.singleton;
  **/
 public class Singleton_v1 {
 
-    private static final Singleton_v1 instart_v1 = new Singleton_v1();
+    private static final Singleton_v1 instance = new Singleton_v1();
 
 
     private Singleton_v1() {
@@ -21,7 +21,7 @@ public class Singleton_v1 {
     }
 
     public static Singleton_v1 getInstance() {
-        return instart_v1;
+        return instance;
     }
 
 }
