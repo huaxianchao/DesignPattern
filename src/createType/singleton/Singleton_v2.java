@@ -16,11 +16,37 @@ public class Singleton_v2 {
     private Singleton_v2() {
     }
 
-    public static Singleton_v2 getInstance() {
+    public static Singleton_v2 getInstance() throws InterruptedException {
         if (instance == null) {
+            //模拟多线程同时进入到此处
+            Thread.sleep(1);
             instance = new Singleton_v2();
         }
         return instance;
     }
 
+
+    /**
+     * 测试方法,通过模拟测试该单例在多线程情况下是否安全
+     *
+     * @Author: huaxianchao
+     * @Date: 2020/6/8 13:08
+     * @Param:
+     * @Return:
+     */
+    public static void main(String[] args) {
+        for (int i = 0; i < 100; i++) {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        System.out.println(Singleton_v2.getInstance().hashCode());
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
+        }
+
+    }
 }
