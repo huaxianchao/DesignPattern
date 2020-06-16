@@ -1,7 +1,7 @@
 # DesignPattern
 Java设计模式的学习  
 
-&emsp;跟随B站马教学视频士兵  
+&emsp;跟随B站马士兵教学视频  
 &emsp;参考《大话设计模式》-周杰  
 
 设计模式：  
